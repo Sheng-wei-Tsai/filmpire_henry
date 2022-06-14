@@ -2,12 +2,15 @@ import { makeStyles } from "@mui/styles";
 
 export default makeStyles((theme) => ({
   movie: {
+    display: 'flex',
+    justifyContent: 'center',
     padding: '10px',
   },
   links: {
+    textAlign: 'center',
     alignItems: 'center',
-    textDecoration: 'none',
     fontWeight: 'bolder',
+    textDecoration: 'none',
     [theme.breakpoints.up('xs')]: {
       dipslay: 'flex',
       flexDirection: 'column',
