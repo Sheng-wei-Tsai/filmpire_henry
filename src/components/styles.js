@@ -1,4 +1,4 @@
-import { makeStyles } from "@mui/styles";
+import { makeStyles } from '@mui/styles';
 
 export default makeStyles(() => ({
   root: {
@@ -11,5 +11,6 @@ export default makeStyles(() => ({
   content: {
     flexGrow: 1,
     padding: '2em',
+    width: '100%',
   },
 }));

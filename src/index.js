@@ -6,7 +6,7 @@ import { Provider } from 'react-redux';
 
 import App from './components/App';
 import store from './app/store';
-
+import './index.css';
 
 const theme = createTheme({});
 
@@ -18,5 +18,5 @@ ReactDOM.render(
       </BrowserRouter>
     </ThemeProvider>
   </Provider>,
-  document.getElementById('root')
+  document.getElementById('root'),
 );

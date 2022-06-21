@@ -7,15 +7,18 @@ import { searchMovie } from '../../features/currentGenreOrCategory';
 
 import useStyles from './styles';
 
-const Search = () => {
+function Search() {
   const classes = useStyles();
-  const [query, setQuery] = useState('')
+  const [query, setQuery] = useState('');
   const dispatch = useDispatch();
+  const loaction = useLocation();
   const handleKeyPress = (event) => {
     if (event.key === 'Enter') {
       dispatch(searchMovie(query));
     }
   };
+
+  if (location.pathname !== '/') return null;
 
   return (
     <div className={classes.searchContainer}>
@@ -27,16 +30,14 @@ const Search = () => {
         InputProps={{
           className: classes.input,
           startAdornment: (
-            <InputAdornment position='start' >
+            <InputAdornment position="start">
               <SearchIcon />
             </InputAdornment>
-          )
+          ),
         }}
-      >
-
-      </TextField>  
+      />
     </div>
-  )
+  );
 }
 
 export default Search;
